@@ -2,6 +2,7 @@ package by.yaroshuk;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Enums {
     enum Season{
@@ -9,22 +10,12 @@ public class Enums {
     }
 
     public static void main(String[] args) {
-        Season s = Season.AUTUMM;
+        Scanner scanner = new Scanner(System.in);
+        String l = scanner.nextLine();
+        Season season = Season.valueOf(l.trim());
+        System.out.println("Result - " + season);
 
-        switch (s) {
-            case WINTER:
-                System.out.println("Too cold!");
-                break;
-            case SPRING:
-                System.out.println("Good!");
-                break;
-            case SUMMER:
-                System.out.println("Hot!");
-                break;
-            case AUTUMM:
-                System.out.println("Good?");
-                break;
-        }
+
 
     }
 }
