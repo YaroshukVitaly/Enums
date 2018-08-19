@@ -12,7 +12,7 @@ public class Enums {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String l = scanner.nextLine();
-        Season season = Season.valueOf(l.trim());
+        Season season = Season.valueOf(l.trim().toUpperCase());
         System.out.println("Result - " + season);
 
 
